@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tire DPP Manager Dashboard Wireframe</title>
+  <link rel="stylesheet" href="tire-dpp-dashboard.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="frame">
+    <header class="header">
+      <div class="brand">
+        <span class="logo">Tire DPP</span>
+        <div>
+          <h1 class="title">Tire DPP Manager<span class="subtitle"> / 타이어 DPP 관리자</span></h1>
+          <p class="caption">High-fidelity wireframe preview — 1440 × 1024</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-button" aria-label="Help">
+          <span class="icon">?</span>
+        </button>
+        <div class="avatar" aria-label="User status">JD</div>
+      </div>
+    </header>
+
+    <section class="filter-bar">
+      <div class="filter" role="group" aria-label="Product filter">
+        <label>Product<span> / 제품군</span></label>
+        <button class="pill">Tire</button>
+      </div>
+      <div class="filter">
+        <label>Period<span> / 기간</span></label>
+        <button class="pill">Last 30 days</button>
+      </div>
+      <div class="filter">
+        <label>Region<span> / 지역</span></label>
+        <button class="pill">Global</button>
+      </div>
+      <div class="filter">
+        <label>Brand<span> / 브랜드</span></label>
+        <button class="pill">All brands</button>
+      </div>
+      <div class="filter">
+        <label>Plant<span> / 공장</span></label>
+        <button class="pill">All plants</button>
+      </div>
+      <div class="filter">
+        <label>Size (ETRTO)<span> / 규격</span></label>
+        <button class="pill">245/45 R18</button>
+      </div>
+      <div class="filter">
+        <label>Channel<span> / 유통채널</span></label>
+        <button class="pill">OEM + Retail</button>
+      </div>
+      <div class="filter-actions">
+        <button class="secondary">Export CSV / 데이터 내보내기</button>
+        <button class="secondary">Alert Rules / 알림 규칙</button>
+        <button class="icon-button" aria-label="Reset filters">
+          <span class="icon">↺</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="banner warning">
+      <strong>Data connection lost</strong> / 데이터 연결 끊김 — <button class="link">Retry / 다시 시도</button>
+    </section>
+
+    <section class="chips">
+      <span class="chip">Brand: All<span class="remove" aria-hidden="true">×</span></span>
+      <span class="chip">Region: Global<span class="remove" aria-hidden="true">×</span></span>
+    </section>
+
+    <section class="kpi-grid">
+      <article class="card kpi">
+        <header>DPP Completion Rate<span> / DPP 완성률</span></header>
+        <div class="metric">92%</div>
+        <p class="meta">Required fields filled / 필수 필드 충족</p>
+      </article>
+      <article class="card kpi">
+        <header>SVHC Reports Due<span> / SVHC 신고 필요 건수</span></header>
+        <div class="metric warning">18</div>
+        <p class="meta">▲ +3 WoW</p>
+      </article>
+      <article class="card kpi">
+        <header>EPCIS Chain Breaks<span> / 이벤트 단절율</span></header>
+        <div class="metric critical">4.8%</div>
+        <p class="meta">Commission → Recycling gap</p>
+      </article>
+      <article class="card kpi">
+        <header>Scan Success Rate<span> / 스캔 성공률</span></header>
+        <div class="metric success">96.4%</div>
+        <p class="meta">UR 98% · QR 95% · SGTIN 92%</p>
+      </article>
+      <article class="card kpi">
+        <header>Open Recalls & Alerts<span> / 리콜·경보 오픈 티켓</span></header>
+        <div class="metric critical">12</div>
+        <ul class="meta-list">
+          <li>ESPR — Missing recycling proof</li>
+          <li>REACH — SVHC disclosure overdue</li>
+          <li>Plant 04 — Duplicate serial scans</li>
+        </ul>
+      </article>
+      <article class="card kpi">
+        <header>Recovery Progress<span> / 재활용·회수 진행률</span></header>
+        <div class="metric">68%</div>
+        <p class="meta">EPR 54% · PRO 82%</p>
+      </article>
+    </section>
+
+    <section class="main-grid">
+      <article class="card funnel">
+        <header>
+          <h2>Compliance Funnel<span> / 컴플라이언스 퍼널</span></h2>
+          <span class="caption">Period: Last 30 days</span>
+        </header>
+        <ol class="funnel-stages">
+          <li>
+            <div class="stage-label">Raw Material / 원재료</div>
+            <div class="stage-metric success">97%</div>
+            <p class="stage-note">Missing SVHC declarations: 2</p>
+          </li>
+          <li>
+            <div class="stage-label">Production / 생산</div>
+            <div class="stage-metric warning">89%</div>
+            <p class="stage-note">Batch traceability incomplete</p>
+          </li>
+          <li>
+            <div class="stage-label">Distribution / 유통</div>
+            <div class="stage-metric warning">84%</div>
+            <p class="stage-note">Shipping EPCIS gaps: 5%</p>
+          </li>
+          <li>
+            <div class="stage-label">Installation / 장착</div>
+            <div class="stage-metric critical">72%</div>
+            <p class="stage-note">Missing installer signature</p>
+          </li>
+          <li>
+            <div class="stage-label">Recovery / 회수·재활용</div>
+            <div class="stage-metric critical">61%</div>
+            <p class="stage-note">Collection events missing</p>
+          </li>
+        </ol>
+        <div class="empty">No lots match current filters / 현재 필터에 해당하는 로트가 없습니다.</div>
+      </article>
+
+      <article class="card timeline">
+        <header>
+          <h2>EPCIS Event Timeline<span> / 이벤트 타임라인</span></h2>
+          <div class="timeline-actions">
+            <button class="pill small">Group by lot / 로트별</button>
+            <button class="pill small secondary">Group by location / 위치별</button>
+            <div class="filters">
+              <button class="chip small">Anomalies / 이상</button>
+              <button class="chip small">Mandatory missing / 필수 누락</button>
+            </div>
+          </div>
+        </header>
+        <ul class="event-stream">
+          <li>
+            <div class="event-type success">Commission</div>
+            <div class="event-meta">2024-04-01 · Plant 04 · GS1 EPCIS</div>
+            <div class="badge success">Complete</div>
+          </li>
+          <li>
+            <div class="event-type success">Aggregation</div>
+            <div class="event-meta">2024-04-02 · Plant 04 · Palletizer</div>
+            <div class="badge warning">Serial mismatch</div>
+          </li>
+          <li>
+            <div class="event-type">Shipping</div>
+            <div class="event-meta">2024-04-04 · Hub Milan · Carrier Z</div>
+            <div class="badge critical">Missing docs</div>
+          </li>
+          <li>
+            <div class="event-type">Receiving</div>
+            <div class="event-meta">2024-04-06 · Retailer 12 · Italy</div>
+            <div class="badge success">Logged</div>
+          </li>
+          <li>
+            <div class="event-type">Install</div>
+            <div class="event-meta">2024-04-08 · Workshop 02 · Technician A</div>
+            <div class="badge critical">Installer signature missing</div>
+          </li>
+          <li>
+            <div class="event-type">Retread</div>
+            <div class="event-meta">2024-05-18 · Retreader SG</div>
+            <div class="badge warning">Awaiting inspection</div>
+          </li>
+          <li>
+            <div class="event-type">Collection</div>
+            <div class="event-meta">2024-06-01 · Collection Center KR</div>
+            <div class="badge">Pending</div>
+          </li>
+          <li>
+            <div class="event-type">Recycling</div>
+            <div class="event-meta">2024-06-12 · Recycler JPN</div>
+            <div class="badge">Scheduled</div>
+          </li>
+        </ul>
+        <div class="error">Unable to load events / 이벤트를 불러올 수 없습니다.</div>
+      </article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="card table">
+        <header>
+          <h2>Lots &amp; Models<span> / 로트·모델</span></h2>
+          <input type="search" placeholder="Search GTIN, DOT or tag / GTIN·DOT·태그 검색" />
+        </header>
+        <div class="tag-row">
+          <span class="chip">High Risk</span>
+          <span class="chip warning">Retread</span>
+          <span class="chip critical">Pending SVHC</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>GTIN</th>
+              <th>SGTIN Range</th>
+              <th>DOT Code</th>
+              <th>Plant</th>
+              <th>Production Date</th>
+              <th>Labels</th>
+              <th>Retread</th>
+              <th>Defect Reports</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>037000-12345</td>
+              <td>0001-0500</td>
+              <td>DOT X1 AB</td>
+              <td>Plant 04</td>
+              <td>2024-03-18</td>
+              <td><span class="tag">Fuel A</span><span class="tag">Wet A</span><span class="tag">Noise 68dB</span></td>
+              <td><span class="badge success">Yes</span></td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>037000-98765</td>
+              <td>0501-1000</td>
+              <td>DOT X1 AC</td>
+              <td>Plant 02</td>
+              <td>2024-02-10</td>
+              <td><span class="tag">Fuel B</span><span class="tag">Wet B</span><span class="tag">Noise 70dB</span></td>
+              <td><span class="badge warning">Review</span></td>
+              <td>5</td>
+            </tr>
+            <tr class="empty-row">
+              <td colspan="8">Adjust filters to view more lots / 필터를 조정해 로트를 확인하세요.</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card map">
+        <header>
+          <h2>Lifecycle Map<span> / 지오 맵</span></h2>
+          <div class="legend">
+            <span class="dot success"></span>On-Time / 정상
+            <span class="dot warning"></span>Delayed / 지연
+            <span class="dot critical"></span>Missing scan / 스캔 누락
+          </div>
+        </header>
+        <div class="map-canvas">
+          <div class="hub success">
+            <span>Plant 04</span>
+            <small>Outbound: 420 · Break rate 2%</small>
+          </div>
+          <div class="hub warning">
+            <span>Milan Hub</span>
+            <small>Receiving: 398 · Break rate 6%</small>
+          </div>
+          <div class="hub critical">
+            <span>Workshop 02</span>
+            <small>Install: 380 · Missing scans 14%</small>
+          </div>
+          <svg viewBox="0 0 400 240" aria-hidden="true">
+            <path d="M60 200 Q140 120 220 160 T360 60" />
+          </svg>
+        </div>
+        <div class="map-empty">Map unavailable. Check network / 맵을 불러올 수 없습니다. 네트워크를 확인하세요.</div>
+      </article>
+
+      <article class="card inbox">
+        <header>
+          <h2>Alerts &amp; Recalls<span> / 알림·리콜 인박스</span></h2>
+          <nav class="tabs">
+            <button class="tab active">Open</button>
+            <button class="tab">In Progress</button>
+            <button class="tab">Resolved</button>
+          </nav>
+        </header>
+        <ul class="alert-list">
+          <li>
+            <span class="severity critical">Critical / 심각</span>
+            <span class="regulation">ESPR</span>
+            <span class="category">Missing recycling proof</span>
+            <span class="sla">SLA 4h</span>
+            <span class="owner">Owner: J. Kim</span>
+            <button class="primary">Resolve / 조치</button>
+          </li>
+          <li>
+            <span class="severity warning">High / 높음</span>
+            <span class="regulation">REACH</span>
+            <span class="category">SVHC disclosure overdue</span>
+            <span class="sla">SLA 1d</span>
+            <span class="owner">Owner: M. Rossi</span>
+            <button class="primary">Resolve / 조치</button>
+          </li>
+          <li>
+            <span class="severity">Medium / 보통</span>
+            <span class="regulation">ESPR</span>
+            <span class="category">Duplicate serial scans</span>
+            <span class="sla">SLA 2d</span>
+            <span class="owner">Owner: L. Chen</span>
+            <button class="primary">Resolve / 조치</button>
+          </li>
+        </ul>
+        <div class="inbox-empty">No open alerts / 열려있는 알림이 없습니다.</div>
+      </article>
+    </section>
+  </div>
+
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <header class="modal-header">
+        <h2>Tire Profile / 타이어 프로필</h2>
+        <p class="caption">SGTIN 0037000-12345-0001</p>
+        <button class="icon-button" aria-label="Close modal">×</button>
+      </header>
+      <div class="modal-body">
+        <aside class="profile">
+          <h3>Summary / 요약</h3>
+          <ul>
+            <li><strong>Brand</strong>: ContiMax</li>
+            <li><strong>Model</strong>: EcoGrip A/S</li>
+            <li><strong>GTIN</strong>: 037000-12345</li>
+            <li><strong>DOT</strong>: X1 AB 3024</li>
+            <li><strong>Plant</strong>: 04</li>
+            <li><strong>Production</strong>: 2024-03-18</li>
+            <li><strong>Retread</strong>: Eligible · 0 cycles</li>
+            <li><strong>Status</strong>: In recovery / 회수 진행 중</li>
+          </ul>
+        </aside>
+        <section class="tabs-content">
+          <nav class="tabs">
+            <button class="tab active">Event History / 이벤트 이력</button>
+            <button class="tab">Inspections &amp; Defects / 점검·결함</button>
+            <button class="tab">Scan Logs / 스캔 로그</button>
+            <button class="tab">Code Status / 코드 상태</button>
+          </nav>
+          <div class="tab-panel">
+            <ul class="event-stream compact">
+              <li>
+                <div class="event-type success">Commission</div>
+                <div class="event-meta">2024-04-01 · Plant 04 · Operator: L. Chen</div>
+                <div class="badge success">Complete</div>
+              </li>
+              <li>
+                <div class="event-type">Shipping</div>
+                <div class="event-meta">2024-04-04 · Carrier Z · Hub Milan</div>
+                <div class="badge critical">Docs missing</div>
+              </li>
+              <li>
+                <div class="event-type">Install</div>
+                <div class="event-meta">2024-04-08 · Workshop 02 · Tech A</div>
+                <div class="badge critical">Signature missing</div>
+              </li>
+              <li class="empty-row">No data recorded / 데이터가 없습니다.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <footer class="modal-footer">
+        <button class="primary">Resolve / 조치</button>
+        <button class="secondary">Add Comment / 코멘트</button>
+        <button class="secondary">Attach Evidence / 증빙 첨부</button>
+        <button class="secondary">Download EPCIS / EPCIS 내보내기</button>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
