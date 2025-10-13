@@ -107,6 +107,13 @@ Place in three equal cards (Auto Layout horizontal, 24 px gap).
 - Accessibility: min contrast ratio 4.5:1, focus ring `#2563EB` 2 px.
 - Include annotation for responsive considerations (collapsing third row into tabs at < 1200 px).
 
+## Scenario Gallery for Stakeholder Reviews
+- Export varied screenshots from `design/tire-dpp-dashboard-scenarios.html` to illustrate three states:
+  1. **Global Compliance Pulse** — leadership overview with mixed alerts.
+  2. **Plant 04 Production Drilldown** — single-plant performance with high data quality.
+  3. **Recall Response War Room** — crisis posture with degraded KPIs and escalation workflows.
+- Each scenario reuses the 1440 × 1024 canvas, bilingual labelling, and inline drilldown modal rendered as a static card for presentation.
+
 ## Deliverables Checklist
 - [x] Filter bar with bilingual labels and error prompt
 - [x] Six KPI cards with specified metrics
