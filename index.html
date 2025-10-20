@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 뭐 먹지? 돌림판</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="app__title">오늘 뭐 먹지?</h1>
+      <p class="app__subtitle">스타트 버튼을 눌러 돌림판을 돌려보세요!</p>
+      <div class="wheel-wrapper">
+        <div class="pointer" aria-hidden="true"></div>
+        <div class="wheel" role="img" aria-label="메뉴 돌림판">
+          <div class="segment" style="--rotation: 90deg; --segment-color: #f94144">
+            <span>분식</span>
+          </div>
+          <div class="segment" style="--rotation: 180deg; --segment-color: #f3722c">
+            <span>피자</span>
+          </div>
+          <div class="segment" style="--rotation: 270deg; --segment-color: #f9c74f">
+            <span>비빔밥</span>
+          </div>
+          <div class="segment" style="--rotation: 360deg; --segment-color: #90be6d">
+            <span>도시락</span>
+          </div>
+        </div>
+      </div>
+      <button id="start-button" type="button" class="start-button">스타트</button>
+      <output id="result" class="result" role="status" aria-live="polite"></output>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
